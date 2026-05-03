@@ -1,0 +1,23 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/home--21st-century-christian-worship-center-page", "destination": "/", "permanent": true },
+    { "source": "/about", "destination": "/pages/about.html", "permanent": true },
+    { "source": "/ministries", "destination": "/pages/ministries.html", "permanent": true },
+    { "source": "/sermons", "destination": "/pages/sermons.html", "permanent": true },
+    { "source": "/give", "destination": "/pages/give.html", "permanent": true },
+    { "source": "/contact", "destination": "/pages/contact.html", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ],
+  "outputDirectory": "site"
+}

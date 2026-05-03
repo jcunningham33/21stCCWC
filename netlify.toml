@@ -1,0 +1,41 @@
+[build]
+  publish = "site"
+
+[[redirects]]
+  from = "/home--21st-century-christian-worship-center-page"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about"
+  to = "/pages/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/ministries"
+  to = "/pages/ministries.html"
+  status = 301
+
+[[redirects]]
+  from = "/sermons"
+  to = "/pages/sermons.html"
+  status = 301
+
+[[redirects]]
+  from = "/give"
+  to = "/pages/give.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/pages/contact.html"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
