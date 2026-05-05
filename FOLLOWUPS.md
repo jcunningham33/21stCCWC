@@ -20,7 +20,7 @@ decisions are made.
 | # | Item | Where it lives in the repo | Status |
 | --- | --- | --- | --- |
 | 1.1 | ~~Office phone number~~ — **DONE** (`447‑287‑8227` wired into Contact + every footer). **Verify spelling:** Danville IL is area code 217; please confirm 447 is correct or correct it once. | `site/pages/contact.html`, all footers, JSON‑LD | ✅ |
-| 1.2 | **Confirmed church email** (currently `info@21stccwc.com` placeholder) | `site/pages/contact.html`, all footers, `site/assets/js/main.js` fallback | 🟥 |
+| 1.2 | **Confirmed church email** (currently `21stccwc@gmail.com` placeholder) | `site/pages/contact.html`, all footers, `site/assets/js/main.js` fallback | 🟥 |
 | 1.3 | ~~Mid‑week schedule~~ — **DONE** (Wednesday 6:00 PM Bible Study). | `site/index.html`, `site/pages/ministries.html`, `contact.html`, JSON‑LD | ✅ |
 | 1.4 | **Monthly food distribution date/time** (still "monthly" — needs day/date pattern) | `site/pages/ministries.html` | 🟧 |
 | 1.5 | **Photos**: building exterior, sanctuary, congregation, pastors, worship team, food‑distribution event | drop into `site/assets/images/`, reference where needed | 🟥 |
@@ -64,7 +64,7 @@ decisions are made.
 | 4.1 | **Choose host** — Netlify, Vercel, Cloudflare Pages, GitHub Pages, or shared hosting | both `netlify.toml` and `vercel.json` are committed; pick one. | 🟥 |
 | 4.2 | **Domain** — keep `21stccwc.com` (point DNS at new host) or use a new domain | DNS change steps differ per host. | 🟥 |
 | 4.3 | **HTTPS** — auto on Netlify/Vercel/Cloudflare; manual on shared hosting | verify after DNS cutover. | 🟧 |
-| 4.4 | **Mail / email forwarding** for `info@21stccwc.com` (or chosen address) | needs MX records + a mailbox or forwarder (Google Workspace, Cloudflare Email Routing, etc.). | 🟧 |
+| 4.4 | **Mail / email forwarding** for `21stccwc@gmail.com` (or chosen address) | needs MX records + a mailbox or forwarder (Google Workspace, Cloudflare Email Routing, etc.). | 🟧 |
 | 4.5 | **`www` ↔ apex** redirect | Netlify/Vercel handle it via domain settings — confirm post‑deploy. | 🟨 |
 | 4.6 | **Old URL redirects** — `/home--21st-century-christian-worship-center-page` → `/` already configured | confirm working after DNS cutover, then audit Google Search Console for any other paths to redirect. | 🟨 |
 

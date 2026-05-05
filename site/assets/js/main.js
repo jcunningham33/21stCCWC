@@ -18,7 +18,7 @@
       var status = form.querySelector('.form-status');
       if (status) {
         status.textContent =
-          'Thank you. Please email us directly at info@21stccwc.com — this static site does not yet have a backend handler.';
+          'Thank you. Please email us directly at 21stccwc@gmail.com — this static site does not yet have a backend handler.';
       }
     });
   }

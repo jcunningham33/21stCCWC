@@ -112,7 +112,7 @@ verifiable from public sources, sensible defaults were used. Recommended
 content updates before public launch:
 
 - [ ] Add a **phone number** in `pages/contact.html` and the footer
-- [ ] Replace `info@21stccwc.com` if a different email is preferred
+- [ ] Replace `21stccwc@gmail.com` if a different email is preferred
 - [ ] Confirm or update **mid‑week Bible study** times in `index.html`
       and `pages/ministries.html`
 - [ ] Add real **photos**: building exterior, congregation, pastors,
