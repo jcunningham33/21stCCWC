@@ -19,24 +19,29 @@ decisions are made.
 
 | # | Item | Where it lives in the repo | Status |
 | --- | --- | --- | --- |
-| 1.1 | **Office phone number** | `site/pages/contact.html` (Church Office), footer of every page | 🟥 |
-| 1.2 | **Confirmed church email** (currently `info@21stccwc.com` placeholder) | `site/pages/contact.html`, all footers, `site/assets/js/main.js` fallback message | 🟥 |
-| 1.3 | **Mid‑week service / Bible study schedule** (day + time) | `site/index.html` "Service Times" section, `site/pages/ministries.html` | 🟧 |
-| 1.4 | **Monthly food distribution date/time** (currently just "monthly") | `site/index.html`, `site/pages/ministries.html` | 🟧 |
-| 1.5 | **Photos**: building exterior, sanctuary, congregation, pastors, worship team, food‑distribution event | drop into `site/assets/images/`, reference in `site/index.html` and `site/pages/about.html`, `ministries.html` | 🟥 |
-| 1.6 | **Pastor headshots + bios** (Bishop George L. Dowell, Co‑Pastor Shanae Dowell) | `site/pages/about.html` "Our Pastors", `site/index.html` "Pastors" two‑col | 🟧 |
+| 1.1 | ~~Office phone number~~ — **DONE** (`447‑287‑8227` wired into Contact + every footer). **Verify spelling:** Danville IL is area code 217; please confirm 447 is correct or correct it once. | `site/pages/contact.html`, all footers, JSON‑LD | ✅ |
+| 1.2 | **Confirmed church email** (currently `info@21stccwc.com` placeholder) | `site/pages/contact.html`, all footers, `site/assets/js/main.js` fallback | 🟥 |
+| 1.3 | ~~Mid‑week schedule~~ — **DONE** (Wednesday 6:00 PM Bible Study). | `site/index.html`, `site/pages/ministries.html`, `contact.html`, JSON‑LD | ✅ |
+| 1.4 | **Monthly food distribution date/time** (still "monthly" — needs day/date pattern) | `site/pages/ministries.html` | 🟧 |
+| 1.5 | **Photos**: building exterior, sanctuary, congregation, pastors, worship team, food‑distribution event | drop into `site/assets/images/`, reference where needed | 🟥 |
+| 1.6 | **Pastor headshots** for the 4 leadership entries on About | `site/pages/about.html` Meet the Leadership | 🟧 |
 | 1.7 | **Doctrinal / statement of faith review** — currently standard evangelical wording | `site/pages/about.html` "What We Believe" | 🟧 |
-| 1.8 | **Mission statement wording** — currently paraphrased from public materials | `site/pages/about.html`, `site/index.html` hero subhead | 🟨 |
+| 1.8 | **Mission statement wording** — currently paraphrased; church may have official wording | `site/pages/about.html`, `site/index.html` hero subhead | 🟨 |
 | 1.9 | **Denomination / affiliation** (if any) | `site/pages/about.html` | 🟨 |
 | 1.10 | **Year founded** (currently 2014, from public IRS / Charity Navigator data — confirm) | `site/pages/about.html` "Our Story" | 🟨 |
-| 1.11 | **Confirm full street address + ZIP** (currently `421 N. Vermilion St., Danville, IL` — ZIP unknown) | every page footer, `site/pages/contact.html`, JSON‑LD in `site/index.html` | 🟧 |
+| 1.11 | ~~Address ZIP~~ — **DONE** (61832 wired everywhere). | every page footer, JSON‑LD, map iframes | ✅ |
+| 1.12 | ~~Real logo artwork~~ — current SVG approximates the brush‑cross design. Drop the **original PNG/SVG** the family has into `site/assets/images/` (filenames `logo.svg`, `logo-mark.svg`, `favicon.svg` — see `site/assets/images/README.md`). | `site/assets/images/` | 🟧 |
+| 1.13 | ~~Cash App giving~~ — **DONE** (`$21stccwc`). | `site/pages/give.html`, all footers | ✅ |
+| 1.14 | ~~Leadership bios~~ — **DONE** (4 pastors). | `site/pages/about.html` | ✅ |
+| 1.15 | ~~Sermons → YouTube channel link~~ — **DONE** (`UCFrwg_xUsFdlNga9U5T-LZA`). Featured-video iframes still optional. | `site/pages/sermons.html` | ✅ |
+| 1.16 | ~~Contact form fields~~ — **DONE** (First Name, Last Name, Phone, Email, Message). | `site/pages/contact.html` | ✅ |
 
 ## 2. Functionality that needs a backend / framework
 
 | # | Item | Notes | Status |
 | --- | --- | --- | --- |
-| 2.1 | **Contact form handler** | Currently shows fallback message. Easiest path on Netlify: add `data-netlify="true" name="contact"` to `<form class="contact">` in `site/pages/contact.html` and the form will appear in Netlify Forms inbox. Alternatives: Formspree, Basin, or a serverless function. | 🟥 |
-| 2.2 | **Online giving** | Need link to Givelify / PushPay / Tithe.ly / Stripe — wire into "Online" section of `site/pages/give.html`. Replace the "online giving option is being prepared" paragraph with the real provider link/embed. | 🟥 |
+| 2.1 | **Contact form handler** | Currently shows fallback message. Form already has `name="contact"` so on Netlify just add `data-netlify="true"` to the `<form>` tag in `site/pages/contact.html` and submissions appear in Netlify Forms. Alternatives: Formspree, Basin, or a serverless function. | 🟧 |
+| 2.2 | ~~Online giving~~ — **DONE** via Cash App (`$21stccwc`). Add Givelify / PushPay / Tithe.ly only if the church wants additional rails later. | `site/pages/give.html` | ✅ |
 | 2.3 | **Prayer request submissions** | Currently funneled through the contact form. If a dedicated prayer email or form is desired, add to `site/pages/ministries.html` ("Prayer Ministry" card) and `contact.html`. | 🟨 |
 | 2.4 | **Email newsletter / mailing list signup** | Not in current build. If desired, add a Mailchimp/Buttondown/ConvertKit embed on the Contact page or footer. | 🟩 |
 | 2.5 | **Live‑stream embed** | Sermons page currently links out to Facebook/YouTube. Replace `<a class="btn">Watch</a>` cards with `<iframe>` embeds (FB video plugin or YouTube embed) once we pick a default platform. | 🟨 |
@@ -46,11 +51,11 @@ decisions are made.
 
 | # | Item | Notes | Status |
 | --- | --- | --- | --- |
-| 3.1 | **Logo** — currently a generated SVG cross + "21 CCWC" wordmark | replace `site/assets/images/logo.svg` and `favicon.svg` with the church's official artwork (PNG/SVG). | 🟧 |
-| 3.2 | **Brand color palette** — chose burgundy (`#6b1a2a`) + gold (`#d9a441`) as a respectful church palette | confirm or replace in `:root` of `site/assets/css/styles.css`. | 🟨 |
-| 3.3 | **Typography** — Playfair Display (display) + Source Sans 3 (body), via Google Fonts | confirm or swap in `<link>` tags + `--font-display` / `--font-body` CSS vars. | 🟨 |
-| 3.4 | **Hero image** — currently a CSS gradient | replace with a real photo behind a dark overlay in `.hero` (CSS `background-image`). | 🟨 |
-| 3.5 | **Pastors section image tile** on home page (text‑only placeholder) | replace `<div class="image-stack">` in `site/index.html` with `<img>` of pastors. | 🟧 |
+| 3.1 | **Logo** — current SVG approximates the brush‑cross artwork in blue + gold. Drop the church's original file into `site/assets/images/logo.svg` (and `logo-mark.svg` / `favicon.svg`) to override. See `site/assets/images/README.md`. | `site/assets/images/` | 🟧 |
+| 3.2 | ~~Brand color palette~~ — **DONE**: blue `#1e40af` + gold `#f5b800` to match the artwork. | `:root` in `site/assets/css/styles.css` | ✅ |
+| 3.3 | **Typography** — Playfair Display (display) + Source Sans 3 (body), via Google Fonts. The original logo uses a brush script — if the church wants a closer match in headlines, swap to a brush/marker font. | `<link>` tags + CSS vars | 🟨 |
+| 3.4 | **Hero image** — currently a CSS gradient | replace with a real photo behind a dark overlay in `.hero` | 🟨 |
+| 3.5 | **Pastors section image tile** on home page (text‑only placeholder) | replace `<div class="image-stack">` in `site/index.html` with `<img>` of pastors | 🟧 |
 
 ## 4. Hosting / domain / email infrastructure
 

@@ -15,7 +15,7 @@
   <a href="#main" class="skip-link">Skip to main content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="../index.html" class="brand"><span class="brand-mark">21</span><span>21st Century CWC<small>Danville, Illinois</small></span></a>
+      <a href="../index.html" class="brand"><span class="brand-mark"><img src="../assets/images/logo-mark.svg" alt="21st CCWC logo" /></span><span>21st Century CWC<small>Danville, Illinois</small></span></a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
       <nav class="main-nav" id="primary-nav" aria-label="Primary">
         <ul>
@@ -35,7 +35,7 @@
       <div class="container">
         <div class="breadcrumbs"><a href="../index.html">Home</a> &nbsp;/&nbsp; Contact</div>
         <h1>Visit Us &amp; Get In Touch</h1>
-        <p>We'd love to meet you. Sundays at 10:00 AM at 421 N. Vermilion St., Danville, IL.</p>
+        <p>We'd love to meet you. Sundays 9:15 AM &amp; 10:00 AM and Wednesdays 6:00 PM at 421 N. Vermilion St., Danville, IL 61832.</p>
       </div>
     </section>
 
@@ -46,43 +46,58 @@
             <h2>Church Office</h2>
             <dl>
               <dt>Address</dt>
-              <dd>421 N. Vermilion St.<br />Danville, IL</dd>
+              <dd>421 N. Vermilion St.<br />Danville, IL 61832</dd>
+
+              <dt>Phone</dt>
+              <dd><a href="tel:+14472878227">447-287-8227</a></dd>
 
               <dt>Email</dt>
               <dd><a href="mailto:info@21stccwc.com">info@21stccwc.com</a></dd>
 
-              <dt>Sunday Worship</dt>
-              <dd>10:00 AM</dd>
+              <dt>Sunday</dt>
+              <dd>9:15 AM Back to Basics School<br />10:00 AM Morning Worship</dd>
+
+              <dt>Wednesday</dt>
+              <dd>6:00 PM Bible Study</dd>
 
               <dt>Social</dt>
               <dd>
                 <a href="https://www.facebook.com/21stccwc/" rel="noopener" target="_blank">Facebook</a> ·
-                <a href="https://www.youtube.com/@21stccwc" rel="noopener" target="_blank">YouTube</a> ·
+                <a href="https://www.youtube.com/channel/UCFrwg_xUsFdlNga9U5T-LZA" rel="noopener" target="_blank">YouTube</a> ·
                 <a href="https://www.instagram.com/21stccwc/" rel="noopener" target="_blank">Instagram</a>
               </dd>
             </dl>
-            <p style="margin-top:18px;"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=421+N+Vermilion+St+Danville+IL" rel="noopener" target="_blank">Get Directions</a></p>
+            <p style="margin-top:18px;"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=421+N+Vermilion+St+Danville+IL+61832" rel="noopener" target="_blank">Get Directions</a></p>
 
             <iframe
               class="map-frame"
               title="Map to 421 N. Vermilion St., Danville, IL"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=421+N+Vermilion+St+Danville+IL&output=embed"
+              src="https://www.google.com/maps?q=421+N+Vermilion+St+Danville+IL+61832&output=embed"
               style="margin-top:24px;"></iframe>
           </div>
 
-          <form class="contact" novalidate>
+          <form class="contact" name="contact" novalidate>
             <h2 style="margin-top:0;">Send a Message</h2>
             <p>Use this form for prayer requests, visit information, or general questions.</p>
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
+
+            <div class="form-row">
+              <div>
+                <label for="first_name">First Name</label>
+                <input id="first_name" name="first_name" type="text" autocomplete="given-name" required />
+              </div>
+              <div>
+                <label for="last_name">Last Name</label>
+                <input id="last_name" name="last_name" type="text" autocomplete="family-name" required />
+              </div>
+            </div>
+
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" />
 
             <label for="email">Email</label>
             <input id="email" name="email" type="email" autocomplete="email" required />
-
-            <label for="subject">Subject</label>
-            <input id="subject" name="subject" type="text" />
 
             <label for="message">Message</label>
             <textarea id="message" name="message" required></textarea>
@@ -100,10 +115,10 @@
       <div class="footer-grid">
         <div>
           <h4>21st Century Christian Worship Center</h4>
-          <p>A body of radical believers in Danville, Illinois. Sundays at 10:00 AM.</p>
+          <p>A body of radical believers in Danville, Illinois. Sundays 9:15 &amp; 10 AM · Wednesdays 6 PM.</p>
           <div class="social" aria-label="Social media">
             <a href="https://www.facebook.com/21stccwc/" rel="noopener" target="_blank" aria-label="Facebook">f</a>
-            <a href="https://www.youtube.com/@21stccwc" rel="noopener" target="_blank" aria-label="YouTube">▶</a>
+            <a href="https://www.youtube.com/channel/UCFrwg_xUsFdlNga9U5T-LZA" rel="noopener" target="_blank" aria-label="YouTube">▶</a>
             <a href="https://www.instagram.com/21stccwc/" rel="noopener" target="_blank" aria-label="Instagram">IG</a>
           </div>
         </div>
@@ -111,8 +126,8 @@
           <h4>Visit</h4>
           <ul>
             <li>421 N. Vermilion St.</li>
-            <li>Danville, IL</li>
-            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=421+N+Vermilion+St+Danville+IL" rel="noopener" target="_blank">Get directions →</a></li>
+            <li>Danville, IL 61832</li>
+            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=421+N+Vermilion+St+Danville+IL+61832" rel="noopener" target="_blank">Get directions →</a></li>
           </ul>
         </div>
         <div>
@@ -128,6 +143,7 @@
         <div>
           <h4>Connect</h4>
           <ul>
+            <li><a href="tel:+14472878227">447-287-8227</a></li>
             <li><a href="mailto:info@21stccwc.com">info@21stccwc.com</a></li>
             <li><a href="contact.html">Send a message</a></li>
             <li><a href="give.html">Give online</a></li>
