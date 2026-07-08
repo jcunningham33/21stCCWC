@@ -34,7 +34,7 @@ independently of the original `21stccwc.com` domain.
 - **Ministries** — worship, Bible study, prayer, food distribution,
   women, men, youth, outreach
 - **Sermons** — links to recent featured messages on Facebook + YouTube
-- **Give** — in‑person, by‑mail, and online giving instructions; tax info
+- **Give** — in‑person, by‑mail, and Cash App giving instructions
 - **Contact** — address, email, embedded Google map, contact form,
   social links
 
@@ -56,7 +56,6 @@ content was assembled from the church's confirmed public sources:
 - Facebook: <https://www.facebook.com/21stccwc/>
 - YouTube: <https://www.youtube.com/@21stccwc>
 - Instagram: <https://www.instagram.com/21stccwc/>
-- Charity Navigator profile (EIN 80‑0929434)
 - Local news coverage (WCIA, MyWabashValley) on the church's monthly
   food distribution
 
@@ -70,7 +69,7 @@ Confirmed facts used:
 - Co‑Pastor: Shanae Dowell
 - Tagline: "A body of radical believers…"
 - Outreach: monthly free food distribution
-- EIN: 80‑0929434, founded 2014
+- Founded 2014
 
 ## Deploy
 
