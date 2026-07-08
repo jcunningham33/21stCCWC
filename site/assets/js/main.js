@@ -16,9 +16,30 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var status = form.querySelector('.form-status');
+      var get = function (name) {
+        var el = form.querySelector('[name="' + name + '"]');
+        return el ? el.value.trim() : '';
+      };
+      var first = get('first_name');
+      var last = get('last_name');
+      var email = get('email');
+      var message = get('message');
+      if (!first || !last || !email || !message) {
+        if (status) status.textContent = 'Please fill in your first name, last name, email, and message.';
+        return;
+      }
+      var subject = 'Website message from ' + first + ' ' + last;
+      var body =
+        'Name: ' + first + ' ' + last + '\n' +
+        'Phone: ' + (get('phone') || 'not provided') + '\n' +
+        'Email: ' + email + '\n\n' +
+        message;
+      window.location.href =
+        'mailto:21stccwc@gmail.com?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
       if (status) {
         status.textContent =
-          'Thank you. Please email us directly at 21stccwc@gmail.com — this static site does not yet have a backend handler.';
+          'Your email app should now open with your message ready to send. If it does not, please email us at 21stccwc@gmail.com or call 447-287-8227.';
       }
     });
   }

@@ -158,9 +158,9 @@ Fonts loaded from Google Fonts (Open Font License).
 | Internal links validated | ✅ |
 | Sitemap + robots.txt | ✅ |
 | Deploy configs (Netlify/Vercel) | ✅ |
-| Original photos/branding mirrored | ❌ — source 403, need church to supply |
-| Live form backend | ❌ — needs Netlify Forms/Formspree wiring |
-| Phone number | ❌ — not in public records, needs church input |
+| Phone, email, schedule, giving (Cash App), leadership bios | ✅ supplied by the church |
+| Contact form | ✅ mailto form — opens the visitor's email app addressed to 21stccwc@gmail.com (no third-party account needed) |
+| Original photos mirrored | ❌ — church to supply; SVG logo approximation in place |
 | Original CMS interactives mirrored | ❌ — replaced with clean static equivalents |
 
 Recommendations:
