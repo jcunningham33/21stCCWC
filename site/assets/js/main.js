@@ -39,7 +39,7 @@
         '&body=' + encodeURIComponent(body);
       if (status) {
         status.textContent =
-          'Your email app should now open with your message ready to send. If it does not, please email us at 21stccwc@gmail.com or call 447-287-8227.';
+          'Your email app should now open with your message ready to send. If it does not, please email us at 21stccwc@gmail.com or call 447-284-8227.';
       }
     });
   }
