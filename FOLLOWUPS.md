@@ -67,6 +67,7 @@ decisions are made.
 | 4.3 | **HTTPS** — auto on Netlify/Vercel/Cloudflare; manual on shared hosting | verify after DNS cutover. | 🟧 |
 | 4.4 | **Mail / email forwarding** for `21stccwc@gmail.com` (or chosen address) | needs MX records + a mailbox or forwarder (Google Workspace, Cloudflare Email Routing, etc.). | 🟧 |
 | 4.5 | **`www` ↔ apex** redirect | Netlify/Vercel handle it via domain settings — confirm post-deploy. | 🟨 |
+| 4.7 | **Sitemap/robots domain assumption** — `sitemap.xml` and `robots.txt` use absolute `https://21stccwc.com/...` URLs (required by the sitemap spec); they become fully correct at DNS cutover. If a different domain is chosen, update both files. | `site/sitemap.xml`, `site/robots.txt` | 🟨 |
 | 4.6 | **Old URL redirects** — `/home--21st-century-christian-worship-center-page` → `/` already configured | confirm working after DNS cutover, then audit Google Search Console for any other paths to redirect. | 🟨 |
 
 ## 5. SEO & analytics
