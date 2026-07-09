@@ -555,3 +555,46 @@ form.contact .btn { margin-top: 18px; }
   padding: 14px 30px;
 }
 .event-feature .btn-tickets:hover { background: #ffca28; border-color: #ffca28; color: #1c1c20; }
+
+/* Event countdown */
+.countdown {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 24px 0 6px;
+}
+.countdown .cd-unit {
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 10px;
+  padding: 14px 8px;
+  min-width: 78px;
+}
+.countdown .cd-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.countdown .cd-label {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+}
+.countdown.is-past {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+@media (max-width: 480px) {
+  .countdown { gap: 10px; }
+  .countdown .cd-unit { min-width: 64px; padding: 12px 6px; }
+  .countdown .cd-num { font-size: 1.7rem; }
+}

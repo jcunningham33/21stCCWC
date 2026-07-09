@@ -11,6 +11,36 @@
   var year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
 
+  var countdown = document.querySelector('[data-countdown]');
+  if (countdown) {
+    var target = new Date(countdown.getAttribute('data-countdown')).getTime();
+    var elDays = countdown.querySelector('[data-days]');
+    var elHours = countdown.querySelector('[data-hours]');
+    var elMins = countdown.querySelector('[data-mins]');
+    var elSecs = countdown.querySelector('[data-secs]');
+    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+    var timer;
+    var tick = function () {
+      var diff = target - new Date().getTime();
+      if (isNaN(target) || diff <= 0) {
+        countdown.classList.add('is-past');
+        countdown.textContent = 'The celebration is here! Join us today.';
+        if (timer) clearInterval(timer);
+        return;
+      }
+      var days = Math.floor(diff / 86400000);
+      var hours = Math.floor((diff % 86400000) / 3600000);
+      var mins = Math.floor((diff % 3600000) / 60000);
+      var secs = Math.floor((diff % 60000) / 1000);
+      if (elDays) elDays.textContent = days;
+      if (elHours) elHours.textContent = pad(hours);
+      if (elMins) elMins.textContent = pad(mins);
+      if (elSecs) elSecs.textContent = pad(secs);
+    };
+    tick();
+    timer = setInterval(tick, 1000);
+  }
+
   var form = document.querySelector('form.contact');
   if (form) {
     form.addEventListener('submit', function (e) {
