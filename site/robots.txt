@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://21stccwc.com/sitemap.xml
+Sitemap: https://www.21stccwc.org/sitemap.xml
