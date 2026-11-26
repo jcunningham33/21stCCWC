@@ -68,3 +68,12 @@ function reply_(ok, error) {
     .createTextOutput(JSON.stringify(ok ? { ok: true } : { ok: false, error: error }))
     .setMimeType(ContentService.MimeType.JSON);
 }
+
+/**
+ * Run this once from the Apps Script editor (select it in the toolbar and
+ * click Run). It asks Google for permission to send email and sends a test
+ * message to the church inbox.
+ */
+function sendTestEmail() {
+  MailApp.sendEmail(TO_ADDRESS, 'Website contact form test', 'If you can read this, the contact form script can send email.');
+}
