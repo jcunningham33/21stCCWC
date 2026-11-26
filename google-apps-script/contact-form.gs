@@ -9,6 +9,12 @@
 var TO_ADDRESS = '21stccwc@gmail.com';
 var MAX_PER_10_MIN = 20; // overall cap to limit spam floods
 
+// Opening the Web app URL in a browser shows this. It confirms the
+// deployed version is current. It does not send any email.
+function doGet() {
+  return reply_(true, null, 'contact-form v2');
+}
+
 function doPost(e) {
   try {
     var p = (e && e.parameter) || {};
@@ -63,9 +69,11 @@ function clean_(value, maxLen) {
   return String(value || '').replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '').trim().slice(0, maxLen);
 }
 
-function reply_(ok, error) {
+function reply_(ok, error, version) {
+  var out = ok ? { ok: true } : { ok: false, error: error };
+  if (version) out.version = version;
   return ContentService
-    .createTextOutput(JSON.stringify(ok ? { ok: true } : { ok: false, error: error }))
+    .createTextOutput(JSON.stringify(out))
     .setMimeType(ContentService.MimeType.JSON);
 }
 
