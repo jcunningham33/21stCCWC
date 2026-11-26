@@ -789,3 +789,6 @@ form.contact .btn { margin-top: 18px; }
   .founder-inner { grid-template-columns: 1fr; gap: 28px; }
   .founder-photo { max-width: 280px; margin: 0 auto; }
 }
+
+/* Contact form spam trap (hidden from people, visible to bots) */
+.hp-field { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
